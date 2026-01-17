@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>moo Copy - プライバシーポリシー / Privacy Policy</title>
+    <style>
+        :root {
+            --primary-color: #007AFF;
+            --text-color: #1d1d1f;
+            --secondary-color: #86868b;
+            --background-color: #ffffff;
+            --section-bg: #f5f5f7;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 1px solid #e5e5e5;
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+        }
+        
+        .last-updated {
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+        
+        .language-toggle {
+            margin-top: 20px;
+        }
+        
+        .language-toggle button {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            margin: 0 5px;
+        }
+        
+        .language-toggle button.inactive {
+            background: var(--section-bg);
+            color: var(--text-color);
+        }
+        
+        .language-toggle button:hover {
+            opacity: 0.9;
+        }
+        
+        section {
+            margin-bottom: 30px;
+            padding: 25px;
+            background: var(--section-bg);
+            border-radius: 12px;
+        }
+        
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--text-color);
+        }
+        
+        p {
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+        
+        p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .content {
+            display: none;
+        }
+        
+        .content.active {
+            display: block;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: var(--secondary-color);
+            font-size: 0.85rem;
+            border-top: 1px solid #e5e5e5;
+            margin-top: 40px;
+        }
+        
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>moo Copy</h1>
+            <p class="subtitle">プライバシーポリシー / Privacy Policy</p>
+            <p class="last-updated">最終更新日 / Last Updated: 2026年1月17日 / January 17, 2026</p>
+            <div class="language-toggle">
+                <button id="btn-ja" onclick="showLanguage('ja')">日本語</button>
+                <button id="btn-en" class="inactive" onclick="showLanguage('en')">English</button>
+            </div>
+        </header>
+
+        <!-- 日本語版 -->
+        <div id="content-ja" class="content active">
+            <section>
+                <h2>収集する情報</h2>
+                <p>本アプリは個人情報を収集しません。</p>
+                <p>保存されるテキストデータは全てお使いの端末内にのみ保存され、外部サーバーには送信されません。</p>
+            </section>
+
+            <section>
+                <h2>キーボード拡張について</h2>
+                <p>カスタムキーボード機能はフルアクセスを必要としません。</p>
+                <p>入力内容やクリップボードの内容が外部に送信されることはありません。</p>
+                <p>App Group機能を使用してメインアプリとキーボード間でデータを共有しますが、これは端末内での共有のみです。</p>
+            </section>
+
+            <section>
+                <h2>Face ID / Touch ID</h2>
+                <p>生体認証データはAppleのSecure Enclave内で処理され、本アプリがアクセスすることはありません。</p>
+                <p>認証結果（成功/失敗）のみを受け取ります。</p>
+            </section>
+
+            <section>
+                <h2>データの保存場所</h2>
+                <p>全てのデータは端末内のローカルストレージに保存されます。</p>
+                <p>iCloudへの同期やクラウドバックアップは行われません。</p>
+            </section>
+
+            <section>
+                <h2>お問い合わせ</h2>
+                <p>ご質問やご意見がございましたら、下記のメールアドレスまでご連絡ください。</p>
+                <p><a href="mailto:tsubasa.apps@gmail.com">tsubasa.apps@gmail.com</a></p>
+            </section>
+        </div>
+
+        <!-- English Version -->
+        <div id="content-en" class="content">
+            <section>
+                <h2>Information We Collect</h2>
+                <p>This app does not collect any personal information.</p>
+                <p>All text data you save is stored only on your device and is never transmitted to external servers.</p>
+            </section>
+
+            <section>
+                <h2>Keyboard Extension</h2>
+                <p>The custom keyboard feature does not require Full Access.</p>
+                <p>Your input and clipboard contents are never sent externally.</p>
+                <p>App Group is used to share data between the main app and keyboard, but this sharing occurs only within your device.</p>
+            </section>
+
+            <section>
+                <h2>Face ID / Touch ID</h2>
+                <p>Biometric data is processed within Apple's Secure Enclave and is never accessed by this app.</p>
+                <p>We only receive the authentication result (success/failure).</p>
+            </section>
+
+            <section>
+                <h2>Data Storage</h2>
+                <p>All data is stored in local storage on your device.</p>
+                <p>No iCloud sync or cloud backup is performed.</p>
+            </section>
+
+            <section>
+                <h2>Contact</h2>
+                <p>If you have any questions or feedback, please contact us at the email address below.</p>
+                <p><a href="mailto:tsubasa.apps@gmail.com">tsubasa.apps@gmail.com</a></p>
+            </section>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 moo Copy. All rights reserved.</p>
+            <p><a href="mailto:tsubasa.apps@gmail.com">tsubasa.apps@gmail.com</a></p>
+        </footer>
+    </div>
+
+    <script>
+        function showLanguage(lang) {
+            document.getElementById('content-ja').classList.remove('active');
+            document.getElementById('content-en').classList.remove('active');
+            document.getElementById('content-' + lang).classList.add('active');
+            
+            document.getElementById('btn-ja').classList.add('inactive');
+            document.getElementById('btn-en').classList.add('inactive');
+            document.getElementById('btn-' + lang).classList.remove('inactive');
+        }
+    </script>
+</body>
+</html>
