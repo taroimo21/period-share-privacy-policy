@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>moo Copy サポート</title>
+    <style>
+      :root {
+        color-scheme: light;
+      }
+      body {
+        margin: 0;
+        padding: 24px;
+        font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+        line-height: 1.7;
+        color: #111;
+        background: #f7f7f9;
+      }
+      main {
+        max-width: 820px;
+        margin: 0 auto;
+        background: #fff;
+        padding: 24px;
+        border-radius: 12px;
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+      }
+      h1 {
+        font-size: 28px;
+        margin: 0 0 8px;
+      }
+      h2 {
+        font-size: 20px;
+        margin: 24px 0 8px;
+      }
+      ul, ol {
+        padding-left: 20px;
+      }
+      code {
+        background: #f1f3f5;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+        font-size: 0.95em;
+      }
+      .note {
+        background: #f6f8ff;
+        border: 1px solid #e1e7ff;
+        padding: 12px;
+        border-radius: 8px;
+      }
+      .muted {
+        color: #666;
+        font-size: 0.95em;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>moo Copy サポート</h1>
+      <p class="muted">最終更新日: YYYY/MM/DD</p>
+
+      <h2>概要</h2>
+      <p>
+        moo Copy は、定型文・スニペット・URL などを「クリップ」として保存し、フォルダで整理できるコピペ管理アプリです。
+        タップでコピー、カスタムキーボードから直接入力できるため、どのアプリでも素早く貼り付けできます。
+      </p>
+
+      <h2>使い方（基本）</h2>
+      <ol>
+        <li>「フォルダ」タブの右上「+」でフォルダ作成</li>
+        <li>フォルダ内の「+」でクリップ追加</li>
+        <li>クリップをタップしてコピー（長押しでメニュー、スワイプで編集/削除/ピン留め）</li>
+      </ol>
+
+      <h2>キーボード設定</h2>
+      <ol>
+        <li>iOS設定 &gt; 一般 &gt; キーボード &gt; キーボード &gt; 新しいキーボードを追加</li>
+        <li>「moo Copy」を追加</li>
+        <li>入力時に地球儀ボタンで切り替え</li>
+      </ol>
+      <div class="note">
+        <p>※ フルアクセスは不要です。入力内容は外部に送信されません。</p>
+        <p>※ ロック中のフォルダはキーボードに表示されません。</p>
+      </div>
+
+      <h2>テンプレート</h2>
+      <p>本文に以下のタグを入れると、入力時に置き換わります。</p>
+      <p>
+        <code>{date}</code>
+        <code>{date_short}</code>
+        <code>{time}</code>
+        <code>{datetime}</code>
+        <code>{year}</code>
+        <code>{month}</code>
+        <code>{day}</code>
+        <code>{weekday}</code>
+        <code>{weekday_short}</code>
+        <code>{tomorrow}</code>
+        <code>{yesterday}</code>
+        <code>{clipboard}</code>
+      </p>
+
+      <h2>セキュリティ</h2>
+      <ul>
+        <li>フォルダ/クリップのロック（Face ID / Touch IDで解除）</li>
+        <li>アプリ起動時ロック（パスコードも利用可）</li>
+        <li>本文プレビューの非表示設定</li>
+      </ul>
+
+      <h2>履歴・ゴミ箱</h2>
+      <ul>
+        <li>最近コピーした履歴を確認できます</li>
+        <li>削除したクリップはゴミ箱から復元可能です</li>
+      </ul>
+
+      <h2>バックアップ</h2>
+      <ul>
+        <li>JSON形式でエクスポート/インポートが可能</li>
+        <li>バックアップは暗号化されません</li>
+      </ul>
+
+      <h2>データとプライバシー</h2>
+      <ul>
+        <li>保存データは端末内のみに保持され、外部サーバーへ送信されません</li>
+        <li>カスタムキーボードのフルアクセスは不要です</li>
+        <li>メインアプリとキーボードの連携は端末内の共有領域（App Group）で行います</li>
+      </ul>
+
+      <h2>よくある質問</h2>
+      <p><strong>Q. キーボードに「moo Copy」が出ません</strong><br />
+        A. iOS設定の「新しいキーボードを追加」から追加してください。追加後は地球儀ボタンで切り替えられます。
+      </p>
+      <p><strong>Q. ロックしたフォルダやクリップが見えません</strong><br />
+        A. ロック中のフォルダ/クリップはプライバシー保護のため非表示になります。解除後に表示されます。
+      </p>
+      <p><strong>Q. 解除できません</strong><br />
+        A. 端末のFace ID/Touch ID設定をご確認ください。
+      </p>
+
+      <h2>お問い合わせ</h2>
+      <p>
+        サポート: <a href="mailto:tsubasa.apps@gmail.com">tsubasa.apps@gmail.com</a><br />
+        ※ 返信まで数日かかる場合があります。
+      </p>
+    </main>
+  </body>
+</html>
