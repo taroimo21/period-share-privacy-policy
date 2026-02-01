@@ -1,486 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>moo AItan - Privacy Policy & Terms of Service</title>
-    <style>
-        :root {
-            --sage: #6B8E7D;
-            --sage-light: #e8f0ec;
-            --slate: #5C6B7A;
-            --bg: #FAF8F5;
-            --text: #2c2c2c;
-            --muted: #666;
-            --border: #e0ddd8;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.7;
-        }
-        header {
-            background: var(--sage);
-            color: #fff;
-            text-align: center;
-            padding: 2.5rem 1rem 2rem;
-        }
-        header h1 { font-size: 1.8rem; font-weight: 700; }
-        header p { margin-top: 0.3rem; opacity: 0.85; font-size: 0.95rem; }
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            padding: 1rem;
-            background: #fff;
-            border-bottom: 1px solid var(--border);
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
-        nav a {
-            text-decoration: none;
-            color: var(--sage);
-            font-weight: 600;
-            padding: 0.4rem 1rem;
-            border-radius: 6px;
-            transition: background 0.2s;
-        }
-        nav a:hover, nav a.active { background: var(--sage-light); }
-        .lang-switch {
-            text-align: center;
-            padding: 1rem;
-        }
-        .lang-switch button {
-            background: none;
-            border: 1.5px solid var(--sage);
-            color: var(--sage);
-            padding: 0.35rem 1rem;
-            border-radius: 20px;
-            cursor: pointer;
-            font-size: 0.85rem;
-            font-weight: 600;
-            transition: all 0.2s;
-        }
-        .lang-switch button.active {
-            background: var(--sage);
-            color: #fff;
-        }
-        main {
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 0 1.5rem 4rem;
-        }
-        section { display: none; }
-        section.visible { display: block; }
-        .policy-section {
-            background: #fff;
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            padding: 1.5rem;
-            margin-bottom: 1.2rem;
-        }
-        h2 {
-            font-size: 1.4rem;
-            color: var(--sage);
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--sage-light);
-        }
-        h3 {
-            font-size: 1rem;
-            color: var(--slate);
-            margin-bottom: 0.6rem;
-        }
-        p, li { font-size: 0.92rem; color: var(--text); }
-        ul { padding-left: 1.2rem; margin-bottom: 0.5rem; }
-        li { margin-bottom: 0.3rem; }
-        a { color: var(--sage); }
-        .updated {
-            text-align: center;
-            color: var(--muted);
-            font-size: 0.82rem;
-            margin-bottom: 2rem;
-        }
-        footer {
-            text-align: center;
-            padding: 2rem 1rem;
-            color: var(--muted);
-            font-size: 0.8rem;
-            border-top: 1px solid var(--border);
-        }
-        @media (max-width: 600px) {
-            header h1 { font-size: 1.4rem; }
-            main { padding: 0 1rem 3rem; }
-            .policy-section { padding: 1.2rem; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>moo AI単 – Privacy Policy & Terms of Service</title>
+<style>
+  :root { --bg: #f9f9f6; --card: #ffffff; --text: #2d2d2d; --muted: #6b6b6b; --accent: #7c9a6e; --border: #e0ddd5; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+  .container { max-width: 720px; margin: 0 auto; padding: 40px 20px; }
+  h1 { font-size: 1.8rem; margin-bottom: 8px; }
+  .subtitle { color: var(--muted); margin-bottom: 32px; }
+  .lang-switch { text-align: right; margin-bottom: 24px; }
+  .lang-switch a { color: var(--accent); text-decoration: none; font-weight: 600; }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 28px; margin-bottom: 20px; }
+  h2 { font-size: 1.2rem; color: var(--accent); margin-bottom: 12px; }
+  ul { padding-left: 20px; margin: 8px 0; }
+  li { margin-bottom: 6px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.85rem; margin-top: 40px; }
+  .ja { display: none; }
+  .toggle-target.show-ja .en { display: none; }
+  .toggle-target.show-ja .ja { display: block; }
+</style>
 </head>
 <body>
-    <header>
-        <h1>moo AItan</h1>
-        <p>AI-Powered Flashcard Learning App</p>
-    </header>
+<div class="container toggle-target" id="root">
 
-    <nav>
-        <a href="#privacy" id="nav-privacy" class="active" onclick="showSection('privacy')">Privacy Policy</a>
-        <a href="#terms" id="nav-terms" onclick="showSection('terms')">Terms of Service</a>
-    </nav>
+<div class="lang-switch">
+  <a href="#" onclick="document.getElementById('root').classList.toggle('show-ja');return false;">English / 日本語</a>
+</div>
 
-    <div class="lang-switch">
-        <button id="btn-en" class="active" onclick="switchLang('en')">English</button>
-        <button id="btn-ja" onclick="switchLang('ja')">Japanese</button>
-    </div>
+<!-- ====== ENGLISH ====== -->
+<div class="en">
+<h1>Privacy Policy</h1>
+<p class="subtitle">Last updated: February 2025</p>
 
-    <main>
-        <!-- ===== PRIVACY POLICY (EN) ===== -->
-        <section id="privacy-en" class="visible">
-            <h2>Privacy Policy</h2>
-            <p class="updated">Last updated: February 1, 2026</p>
+<div class="section">
+<h2>Introduction</h2>
+<p>moo AI単 ("we", "the App") is an AI-powered flashcard learning application. This Privacy Policy explains how we collect, use, and protect your information.</p>
+</div>
 
-            <div class="policy-section">
-                <h3>1. Operator Information</h3>
-                <ul>
-                    <li><strong>Operator:</strong> Tsubasa Sakamoto</li>
-                    <li><strong>Location:</strong> Tokyo, Japan</li>
-                    <li><strong>Contact:</strong> <a href="mailto:mooippo.otoiawase@gmail.com">mooippo.otoiawase@gmail.com</a></li>
-                </ul>
-            </div>
+<div class="section">
+<h2>Information We Collect</h2>
+<ul>
+  <li><strong>Sign-in information &amp; user identifiers</strong> – When you sign in with Apple, we receive a user identifier to manage your account.</li>
+  <li><strong>Usage quota management data</strong> – We store your remaining generation quota on our server so it can be managed across sessions. <strong>Deck content, study history, and test results are stored only on your device and are never uploaded to our servers.</strong></li>
+  <li><strong>Device &amp; crash information</strong> – Basic device information and crash logs may be collected through Firebase Analytics to help us improve the App.</li>
+  <li><strong>Advertising identifiers</strong> – Third-party ad SDKs (Google AdMob) may collect device information and advertising identifiers for ad delivery.</li>
+</ul>
+</div>
 
-            <div class="policy-section">
-                <h3>2. Information We Collect</h3>
-                <ul>
-                    <li>Sign-in information (e.g., Sign in with Apple) and user identifiers</li>
-                    <li>Created deck content, study history, test results, and usage data (e.g., number of generations)</li>
-                    <li>Device information, app usage logs, and crash information</li>
-                    <li>Device information and advertising identifiers needed for ad delivery (may be collected by ad SDKs)</li>
-                </ul>
-            </div>
+<div class="section">
+<h2>How We Use Your Information</h2>
+<ul>
+  <li>Provide and maintain the App's core functionality (account management, quota management)</li>
+  <li>Deliver personalized advertisements through Google AdMob</li>
+  <li>Analyze usage patterns and fix bugs via Firebase Analytics</li>
+  <li>Process subscription payments through Apple's In-App Purchase system</li>
+</ul>
+</div>
 
-            <div class="policy-section">
-                <h3>3. Purpose of Use</h3>
-                <ul>
-                    <li>Providing the service (deck generation, saving study history, quota management)</li>
-                    <li>Preventing misuse and operating the service safely</li>
-                    <li>Customer support</li>
-                    <li>Ad delivery and effectiveness measurement (if applicable)</li>
-                </ul>
-            </div>
+<div class="section">
+<h2>Data Storage &amp; Security</h2>
+<p>Your user identifier and quota data are stored securely in Google Firebase (Firestore). All data in transit is encrypted via HTTPS/TLS. Your learning content (decks, study history, test results) remains exclusively on your device and is never transmitted to external servers.</p>
+</div>
 
-            <div class="policy-section">
-                <h3>4. External Transmission / Outsourcing</h3>
-                <ul>
-                    <li>We may send information to cloud or AI services as needed to operate the service.</li>
-                    <li>Examples: Firebase (authentication, data storage, Functions), OpenAI (AI generation), AdMob (ads)</li>
-                    <li>These providers may have servers located overseas.</li>
-                </ul>
-            </div>
+<div class="section">
+<h2>Third-Party Services</h2>
+<ul>
+  <li><strong>Firebase Authentication &amp; Firestore</strong> – Account management and quota storage</li>
+  <li><strong>Firebase Analytics</strong> – Usage analytics and crash reporting</li>
+  <li><strong>Google AdMob</strong> – Ad delivery (free tier users)</li>
+  <li><strong>Apple StoreKit</strong> – Subscription payment processing</li>
+  <li><strong>OpenAI API</strong> – AI-powered flashcard generation (prompts are sent to generate content but are not stored by us)</li>
+</ul>
+</div>
 
-            <div class="policy-section">
-                <h3>5. Third-Party Provision</h3>
-                <p>We do not provide information to third parties except as required by law or with user consent.</p>
-            </div>
+<div class="section">
+<h2>Your Rights</h2>
+<ul>
+  <li>You can delete your account and all associated server-side data from Settings within the App.</li>
+  <li>You can opt out of personalized advertising through iOS Settings &gt; Privacy &amp; Security &gt; Tracking.</li>
+  <li>Local data (decks, study history) can be removed by deleting the App from your device.</li>
+</ul>
+</div>
 
-            <div class="policy-section">
-                <h3>6. Data Retention and Deletion</h3>
-                <ul>
-                    <li>Study data is stored and linked to the signed-in account.</li>
-                    <li>Related data is deleted when the account is deleted.</li>
-                    <li>Due to technical reasons, deletion may take some time to complete.</li>
-                </ul>
-            </div>
+<div class="section">
+<h2>Children's Privacy</h2>
+<p>The App is not directed at children under 13. We do not knowingly collect personal information from children.</p>
+</div>
 
-            <div class="policy-section">
-                <h3>7. Requests for Disclosure, Correction, or Deletion</h3>
-                <p>For requests for disclosure, correction, or deletion, please contact us at:<br>
-                <a href="mailto:mooippo.otoiawase@gmail.com">mooippo.otoiawase@gmail.com</a></p>
-            </div>
+<div class="section">
+<h2>Changes to This Policy</h2>
+<p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated revision date.</p>
+</div>
 
-            <div class="policy-section">
-                <h3>8. Use by Minors</h3>
-                <p>Minors must use the service with parental consent.</p>
-            </div>
+<div class="section">
+<h2>Contact Us</h2>
+<p>If you have questions about this Privacy Policy, please contact us at:<br>
+<strong>tsubasa000111gg@icloud.com</strong></p>
+</div>
 
-            <div class="policy-section">
-                <h3>9. Revisions</h3>
-                <p>This policy may be updated as needed, and changes will be announced in the app.</p>
-            </div>
-        </section>
+<hr style="margin: 40px 0; border: none; border-top: 1px solid var(--border);">
 
-        <!-- ===== PRIVACY POLICY (JA) ===== -->
-        <section id="privacy-ja">
-            <h2>プライバシーポリシー</h2>
-            <p class="updated">最終更新日: 2026年2月1日</p>
+<h1>Terms of Service</h1>
+<p class="subtitle">Last updated: February 2025</p>
 
-            <div class="policy-section">
-                <h3>1. 運営者情報</h3>
-                <ul>
-                    <li><strong>運営者:</strong> Tsubasa Sakamoto</li>
-                    <li><strong>所在地:</strong> 東京</li>
-                    <li><strong>連絡先:</strong> <a href="mailto:mooippo.otoiawase@gmail.com">mooippo.otoiawase@gmail.com</a></li>
-                </ul>
-            </div>
+<div class="section">
+<h2>Acceptance of Terms</h2>
+<p>By downloading, installing, or using moo AI単, you agree to these Terms of Service.</p>
+</div>
 
-            <div class="policy-section">
-                <h3>2. 取得する情報</h3>
-                <ul>
-                    <li>サインイン情報（Appleでサインイン等）とユーザー識別子</li>
-                    <li>作成したデッキ内容、学習履歴、テスト結果、使用状況（生成回数など）</li>
-                    <li>端末情報、アプリ利用ログ、クラッシュ情報</li>
-                    <li>広告配信に必要な端末情報や広告識別子等（広告SDKが取得する場合があります）</li>
-                </ul>
-            </div>
+<div class="section">
+<h2>Service Description</h2>
+<p>moo AI単 is an AI-powered flashcard application that helps users create and study custom flashcard decks. The App offers both free and premium subscription tiers.</p>
+</div>
 
-            <div class="policy-section">
-                <h3>3. 利用目的</h3>
-                <ul>
-                    <li>サービス提供（デッキ生成・学習履歴保存・クォータ管理）</li>
-                    <li>不正利用の防止と安全な運営</li>
-                    <li>サポート対応</li>
-                    <li>広告配信および効果測定（該当する場合）</li>
-                </ul>
-            </div>
+<div class="section">
+<h2>Subscriptions</h2>
+<ul>
+  <li>Subscriptions are billed monthly through your Apple ID account.</li>
+  <li>Subscriptions automatically renew unless canceled at least 24 hours before the end of the current billing period.</li>
+  <li>Your Apple ID account will be charged for renewal within 24 hours prior to the end of the current period.</li>
+  <li>You can manage or cancel subscriptions in iOS Settings &gt; [Your Name] &gt; Subscriptions.</li>
+</ul>
+</div>
 
-            <div class="policy-section">
-                <h3>4. 外部送信・業務委託</h3>
-                <ul>
-                    <li>運営に必要な範囲で、クラウドサービスやAIサービスへ情報を送信する場合があります。</li>
-                    <li>例: Firebase（認証・データ保存・Functions）、OpenAI（AI生成）、AdMob（広告）</li>
-                    <li>これらの事業者は海外にサーバーを有する場合があります。</li>
-                </ul>
-            </div>
+<div class="section">
+<h2>AI-Generated Content</h2>
+<p>Flashcard content is generated by AI and may contain inaccuracies. We do not guarantee the accuracy, completeness, or suitability of AI-generated content. Users are responsible for verifying content for their learning needs.</p>
+</div>
 
-            <div class="policy-section">
-                <h3>5. 第三者提供</h3>
-                <p>法令に基づく場合またはユーザーの同意がある場合を除き、第三者へ提供しません。</p>
-            </div>
+<div class="section">
+<h2>Limitation of Liability</h2>
+<p>The App is provided "as is" without warranties of any kind. We shall not be liable for any damages arising from the use of the App or its AI-generated content.</p>
+</div>
 
-            <div class="policy-section">
-                <h3>6. データの保存と削除</h3>
-                <ul>
-                    <li>学習データはサインイン中のアカウントに紐づき保存されます。</li>
-                    <li>退会時に関連データは削除されます。</li>
-                    <li>技術的な理由により削除が完了するまで一定期間を要する場合があります。</li>
-                </ul>
-            </div>
+<div class="section">
+<h2>Contact Us</h2>
+<p>For questions about these Terms, please contact:<br>
+<strong>tsubasa000111gg@icloud.com</strong></p>
+</div>
+</div>
 
-            <div class="policy-section">
-                <h3>7. 開示・訂正・削除の請求</h3>
-                <p>開示・訂正・削除の請求は、下記へご連絡ください。<br>
-                <a href="mailto:mooippo.otoiawase@gmail.com">mooippo.otoiawase@gmail.com</a></p>
-            </div>
+<!-- ====== JAPANESE ====== -->
+<div class="ja">
+<h1>プライバシーポリシー</h1>
+<p class="subtitle">最終更新日: 2025年2月</p>
 
-            <div class="policy-section">
-                <h3>8. 未成年の利用</h3>
-                <p>未成年の方は保護者の同意を得たうえでご利用ください。</p>
-            </div>
+<div class="section">
+<h2>はじめに</h2>
+<p>moo AI単（以下「本アプリ」）は、AIを活用したフラッシュカード学習アプリケーションです。本プライバシーポリシーでは、お客様の情報の収集、利用、保護について説明します。</p>
+</div>
 
-            <div class="policy-section">
-                <h3>9. 改定</h3>
-                <p>本ポリシーは必要に応じて変更し、アプリ内で告知します。</p>
-            </div>
-        </section>
+<div class="section">
+<h2>収集する情報</h2>
+<ul>
+  <li><strong>サインイン情報・ユーザー識別子</strong> – Appleでサインインを利用する際、アカウント管理のためにユーザー識別子を取得します。</li>
+  <li><strong>使用クォータ管理データ</strong> – 生成回数の残数などのクォータ情報をサーバーに保存し、セッション間で管理します。<strong>デッキ内容、学習履歴、テスト結果はお使いの端末にのみ保存され、サーバーにアップロードされることはありません。</strong></li>
+  <li><strong>端末・クラッシュ情報</strong> – Firebase Analyticsを通じて、アプリ改善のための基本的な端末情報やクラッシュログが収集される場合があります。</li>
+  <li><strong>広告識別子</strong> – 第三者の広告SDK（Google AdMob）が、広告配信のために端末情報や広告識別子を収集する場合があります。</li>
+</ul>
+</div>
 
-        <!-- ===== TERMS OF SERVICE (EN) ===== -->
-        <section id="terms-en">
-            <h2>Terms of Service</h2>
-            <p class="updated">Last updated: February 1, 2026</p>
+<div class="section">
+<h2>情報の利用目的</h2>
+<ul>
+  <li>アプリの基本機能の提供・維持（アカウント管理、クォータ管理）</li>
+  <li>Google AdMobによるパーソナライズ広告の配信</li>
+  <li>Firebase Analyticsによる利用状況の分析・バグ修正</li>
+  <li>AppleのApp内課金システムによるサブスクリプション決済処理</li>
+</ul>
+</div>
 
-            <div class="policy-section">
-                <h3>1. Operator Information</h3>
-                <ul>
-                    <li><strong>Operator:</strong> Tsubasa Sakamoto</li>
-                    <li><strong>Location:</strong> Tokyo, Japan</li>
-                    <li><strong>Contact:</strong> <a href="mailto:mooippo.otoiawase@gmail.com">mooippo.otoiawase@gmail.com</a></li>
-                </ul>
-            </div>
+<div class="section">
+<h2>データの保存とセキュリティ</h2>
+<p>ユーザー識別子とクォータデータはGoogle Firebase（Firestore）に安全に保存されます。通信中のデータはすべてHTTPS/TLSにより暗号化されます。学習コンテンツ（デッキ、学習履歴、テスト結果）はお使いの端末にのみ保存され、外部サーバーに送信されることはありません。</p>
+</div>
 
-            <div class="policy-section">
-                <h3>2. Service Overview & Conditions</h3>
-                <ul>
-                    <li>We generate study cards (language, knowledge, and tests) with AI to support learning.</li>
-                    <li>Signing in is required to generate decks and save history.</li>
-                    <li>The free plan has a monthly usage limit. Limits and details follow what is shown in the app.</li>
-                    <li>Purchases and cancellations of paid plans follow App Store rules.</li>
-                </ul>
-            </div>
+<div class="section">
+<h2>第三者サービス</h2>
+<ul>
+  <li><strong>Firebase Authentication・Firestore</strong> – アカウント管理・クォータ保存</li>
+  <li><strong>Firebase Analytics</strong> – 利用状況分析・クラッシュレポート</li>
+  <li><strong>Google AdMob</strong> – 広告配信（無料プランユーザー）</li>
+  <li><strong>Apple StoreKit</strong> – サブスクリプション決済処理</li>
+  <li><strong>OpenAI API</strong> – AI フラッシュカード生成（生成用プロンプトが送信されますが、当方では保存しません）</li>
+</ul>
+</div>
 
-            <div class="policy-section">
-                <h3>3. Use by Minors</h3>
-                <p>Minors must use the service with parental consent.</p>
-            </div>
+<div class="section">
+<h2>お客様の権利</h2>
+<ul>
+  <li>アプリ内の「設定」からアカウントおよびサーバー上の関連データを削除できます。</li>
+  <li>iOS設定 &gt; プライバシーとセキュリティ &gt; トラッキングから、パーソナライズ広告をオプトアウトできます。</li>
+  <li>ローカルデータ（デッキ、学習履歴）は端末からアプリを削除することで消去できます。</li>
+</ul>
+</div>
 
-            <div class="policy-section">
-                <h3>4. AI-Generated Content</h3>
-                <ul>
-                    <li>Input content (certification, level, words, etc.) is sent to external AI services for generation.</li>
-                    <li>Generated content is for learning support only and is not guaranteed to be accurate or complete.</li>
-                    <li>Use for reproducing or copying real exam questions is prohibited.</li>
-                    <li>Use and interpretation of generated content are the user's responsibility.</li>
-                </ul>
-            </div>
+<div class="section">
+<h2>お子様のプライバシー</h2>
+<p>本アプリは13歳未満のお子様を対象としていません。お子様の個人情報を意図的に収集することはありません。</p>
+</div>
 
-            <div class="policy-section">
-                <h3>5. Rights and Ownership</h3>
-                <ul>
-                    <li>Rights to input content belong to the user.</li>
-                    <li>The operator may process and store input content to provide and improve the service.</li>
-                    <li>Users agree not to infringe third-party rights through use of generated content.</li>
-                </ul>
-            </div>
+<div class="section">
+<h2>ポリシーの変更</h2>
+<p>本プライバシーポリシーは随時更新される場合があります。変更がある場合は、本ページにて改訂日とともに公開します。</p>
+</div>
 
-            <div class="policy-section">
-                <h3>6. Prohibited Acts</h3>
-                <ul>
-                    <li>Reproducing real exam questions/answers without permission</li>
-                    <li>Fraudulent acts, acts against public order and morals, or illegal acts</li>
-                    <li>Actions that interfere with service operations</li>
-                    <li>Actions that infringe the rights of others</li>
-                </ul>
-            </div>
+<div class="section">
+<h2>お問い合わせ</h2>
+<p>本プライバシーポリシーに関するご質問は、以下までご連絡ください。<br>
+<strong>tsubasa000111gg@icloud.com</strong></p>
+</div>
 
-            <div class="policy-section">
-                <h3>7. Ads and Billing</h3>
-                <ul>
-                    <li>Some features may be provided through ads or rewarded video viewing.</li>
-                    <li>Ad availability and the number of views may vary by delivery conditions.</li>
-                    <li>Billing and refunds follow App Store rules.</li>
-                </ul>
-            </div>
+<hr style="margin: 40px 0; border: none; border-top: 1px solid var(--border);">
 
-            <div class="policy-section">
-                <h3>8. Disclaimer and Limitation of Liability</h3>
-                <ul>
-                    <li>The operator is not responsible for learning outcomes or exam results.</li>
-                    <li>The service is provided as is and may not be uninterrupted or error-free.</li>
-                    <li>Liability is limited to the extent permitted by law.</li>
-                </ul>
-            </div>
+<h1>利用規約</h1>
+<p class="subtitle">最終更新日: 2025年2月</p>
 
-            <div class="policy-section">
-                <h3>9. Changes and Governing Law</h3>
-                <ul>
-                    <li>These terms may be updated as needed, and changes will be announced in the app.</li>
-                    <li>These terms are governed by Japanese law, and the Tokyo District Court has exclusive jurisdiction.</li>
-                </ul>
-            </div>
-        </section>
+<div class="section">
+<h2>規約への同意</h2>
+<p>moo AI単をダウンロード、インストール、または使用することにより、本利用規約に同意したものとみなします。</p>
+</div>
 
-        <!-- ===== TERMS OF SERVICE (JA) ===== -->
-        <section id="terms-ja">
-            <h2>利用規約</h2>
-            <p class="updated">最終更新日: 2026年2月1日</p>
+<div class="section">
+<h2>サービス内容</h2>
+<p>moo AI単は、AIを活用してカスタムフラッシュカードデッキの作成・学習を支援するアプリケーションです。無料プランとプレミアムサブスクリプションプランを提供しています。</p>
+</div>
 
-            <div class="policy-section">
-                <h3>1. 運営者情報</h3>
-                <ul>
-                    <li><strong>運営者:</strong> Tsubasa Sakamoto</li>
-                    <li><strong>所在地:</strong> 東京</li>
-                    <li><strong>連絡先:</strong> <a href="mailto:mooippo.otoiawase@gmail.com">mooippo.otoiawase@gmail.com</a></li>
-                </ul>
-            </div>
+<div class="section">
+<h2>サブスクリプション</h2>
+<ul>
+  <li>サブスクリプションはApple IDアカウントを通じて月単位で課金されます。</li>
+  <li>現在の課金期間の終了日の24時間前までにキャンセルしない限り、自動的に更新されます。</li>
+  <li>更新料金は、現在の期間終了前24時間以内にApple IDアカウントに請求されます。</li>
+  <li>サブスクリプションの管理・キャンセルは「設定」&gt;「自分の名前」&gt;「サブスクリプション」から行えます。</li>
+</ul>
+</div>
 
-            <div class="policy-section">
-                <h3>2. サービス内容・利用条件</h3>
-                <ul>
-                    <li>AIで学習カード（語学・知識・テスト）を生成し、学習を支援します。</li>
-                    <li>デッキの生成や履歴の保存にはサインインが必要です。</li>
-                    <li>フリープランには月間の利用回数上限があります。上限や内容はアプリ内の表示に従います。</li>
-                    <li>有料プランの購入・解約はApp Storeの規約に従います。</li>
-                </ul>
-            </div>
+<div class="section">
+<h2>AI生成コンテンツ</h2>
+<p>フラッシュカードの内容はAIによって生成されるため、不正確な情報が含まれる可能性があります。AI生成コンテンツの正確性、完全性、適切性は保証しません。コンテンツの検証は利用者自身の責任となります。</p>
+</div>
 
-            <div class="policy-section">
-                <h3>3. 未成年の利用</h3>
-                <p>未成年の方は保護者の同意を得たうえでご利用ください。</p>
-            </div>
+<div class="section">
+<h2>免責事項</h2>
+<p>本アプリは「現状有姿」で提供され、いかなる種類の保証もありません。本アプリまたはAI生成コンテンツの使用から生じるいかなる損害についても、当方は責任を負いません。</p>
+</div>
 
-            <div class="policy-section">
-                <h3>4. AI生成コンテンツ</h3>
-                <ul>
-                    <li>入力内容（資格・レベル・単語等）はAI生成のため外部AIサービスへ送信されます。</li>
-                    <li>生成内容は学習補助のための参考情報であり、正確性・完全性を保証しません。</li>
-                    <li>実在の試験問題の転載・再現を目的とした利用は禁止します。</li>
-                    <li>生成内容の利用・判断はユーザーの責任で行ってください。</li>
-                </ul>
-            </div>
+<div class="section">
+<h2>お問い合わせ</h2>
+<p>本利用規約に関するご質問は、以下までご連絡ください。<br>
+<strong>tsubasa000111gg@icloud.com</strong></p>
+</div>
+</div>
 
-            <div class="policy-section">
-                <h3>5. 権利の帰属</h3>
-                <ul>
-                    <li>入力内容の権利はユーザーに帰属します。</li>
-                    <li>運営者はサービス提供・改善のため、入力内容を処理・保存する権利を有します。</li>
-                    <li>生成内容の利用により第三者の権利を侵害しないことをユーザーが保証します。</li>
-                </ul>
-            </div>
+<div class="footer">
+  <p>&copy; 2025 moo AI単. All rights reserved.</p>
+</div>
 
-            <div class="policy-section">
-                <h3>6. 禁止事項</h3>
-                <ul>
-                    <li>実在試験の問題・解答の転載や無断複製</li>
-                    <li>不正行為、公序良俗に反する行為、法令違反行為</li>
-                    <li>サービス運営を妨げる行為</li>
-                    <li>他者の権利を侵害する行為</li>
-                </ul>
-            </div>
-
-            <div class="policy-section">
-                <h3>7. 広告・課金</h3>
-                <ul>
-                    <li>広告表示や動画視聴による機能提供が行われる場合があります。</li>
-                    <li>広告の視聴可否や表示回数は、配信状況により変動します。</li>
-                    <li>課金・返金はApp Storeの規約に従います。</li>
-                </ul>
-            </div>
-
-            <div class="policy-section">
-                <h3>8. 免責・責任制限</h3>
-                <ul>
-                    <li>学習成果や試験結果について、運営者は一切の責任を負いません。</li>
-                    <li>サービスは現状有姿で提供され、動作・中断・停止を保証しません。</li>
-                    <li>法令で認められる範囲で損害賠償責任を制限します。</li>
-                </ul>
-            </div>
-
-            <div class="policy-section">
-                <h3>9. 変更・準拠法</h3>
-                <ul>
-                    <li>本規約は必要に応じて変更し、アプリ内で告知します。</li>
-                    <li>準拠法は日本法とし、専属的合意管轄は東京地方裁判所とします。</li>
-                </ul>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        &copy; 2026 Tsubasa Sakamoto. All rights reserved.
-    </footer>
-
-    <script>
-        let currentSection = 'privacy';
-        let currentLang = 'en';
-
-        function showSection(section) {
-            currentSection = section;
-            document.getElementById('nav-privacy').classList.toggle('active', section === 'privacy');
-            document.getElementById('nav-terms').classList.toggle('active', section === 'terms');
-            updateView();
-        }
-
-        function switchLang(lang) {
-            currentLang = lang;
-            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-            document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
-            updateView();
-        }
-
-        function updateView() {
-            document.querySelectorAll('section').forEach(s => s.classList.remove('visible'));
-            const target = document.getElementById(currentSection + '-' + currentLang);
-            if (target) target.classList.add('visible');
-        }
-    </script>
+</div>
 </body>
 </html>
